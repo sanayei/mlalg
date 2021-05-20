@@ -9,8 +9,8 @@ class LogisticRegression(Regression):
 
     def cost_fn(self, X, y):
         a = self.sigmoid(self.predict(X))
-        J = np.sum(-y * np.log(a) - (1 - y) * np.log(1 - a))
-        return J
+        cost = np.sum(-y * np.log(a) - (1 - y) * np.log(1 - a))
+        return cost
 
     def gradient(self, X, y):
         a = self.sigmoid(self.predict(X))
